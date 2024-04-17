@@ -12,7 +12,7 @@ interface StyledH2Props {
 
 const StyledH2 = ({ children }: StyledH2Props) => {
   return (
-    <h2 className={`${roboto.className} text-[4rem] lg:text-[8rem] transition-colors hover:text-green-500` } style={{ color: 'transparent', WebkitTextStroke: '1px black',}}>
+    <h2 className={`${roboto.className} text-[4rem] lg:text-[8rem]` } style={{ color: 'transparent', WebkitTextStroke: '1px black',}}>
       {children}
     </h2>
   );

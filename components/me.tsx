@@ -4,11 +4,21 @@ import React, { useEffect } from 'react';
 import {motion } from 'framer-motion';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section';
 
 export default function Me() {
+    const {ref, inView} = useInView({
+        threshold:0.5,  }); //checks to see if this seciton is in view
+      const {setActiveSection} = useActiveSectionContext();
+      
+      useEffect(() => {
+         if (inView) { 
+        setActiveSection("Home")
+      }
+      }, [inView, setActiveSection])
 
   return (
-    <section className='flex mt-[10rem] mx-[2rem] scroll-mb-20' id="Home">
+    <section ref={ref} className='flex mt-[10rem] mx-[2rem] scroll-mb-20' id="Home">
         <div className='flex items-center justify-center'>
 
             <div className='h-full pl-10 flex flex-col '>

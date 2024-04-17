@@ -2,25 +2,42 @@
 import React, { useState, createContext, useContext } from 'react'
 import { links } from '@/lib/data';
 
-// type SectionName = typeof links[number]["name"];
+type SectionName = typeof links[number]["name"];
 
-// type ActiveSectionContentProviderProps = {
-//     children : React.ReactNode
-// }
+type ActiveSectionContentProviderProps = {
+    children : React.ReactNode
+}
 
-// type ActiveSectionContextType = {
-//     activeSection: SectionName;
-//     setActiveSection: React.Dispatch<React.SetStateAction<"Home" | "Skills" | "Projects" | "Contact">>
-// }
+type ActiveSectionContextType = {
+    activeSection: SectionName;
+    setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>
+}
 
-// export const ActiveSectionContext = React.createContext<ActiveSectionContextType | null>(null);
+export const ActiveSectionContext = React.createContext<ActiveSectionContextType | null>(null);
 
-// export default function ActiveSectionContextProvider({children,}: 
-//     ActiveSectionContentProviderProps) {
-//     const [activeSection, setActiveSection] = useState<SectionName>('Home');
+export default function ActiveSectionContextProvider({children,}: 
+    ActiveSectionContentProviderProps) {
+    const [activeSection, setActiveSection] = useState<SectionName>("Home");
     
-//   return (
-// <></>
-// )}
+  return (
+    <ActiveSectionContext.Provider
+    value={{ 
+        activeSection, 
+        setActiveSection,
+     }}>
+        {children}
+    </ActiveSectionContext.Provider>
+)}
+
+export function useActiveSectionContext() {
+    const context = useContext(ActiveSectionContext);
+
+    if (context === null) { 
+        throw new Error (
+            "Error with Context"
+        )
+    }
+    return context;
+}
 
 

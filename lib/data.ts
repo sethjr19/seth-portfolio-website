@@ -1,7 +1,7 @@
 import glipzImg from '@/public/glipz.png'
 import { describe } from 'node:test';
 import { title } from 'process';
-import { LuGraduationCap, LuSchool  } from "react-icons/lu";
+import { LuGraduationCap, LuSchool, LuGamepad2 } from "react-icons/lu";
 import { FaUniversity } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
 import React from 'react';
@@ -39,6 +39,13 @@ export const skillsData = [
 
 export const experienceData = [
     {
+        title:'Game Developer Internship',
+        location: 'Gameka Sdn Bhd.',
+        description: '- Performed bug testing & Assisted with deployment of a 2-D Game',
+        icon: React.createElement(LuGamepad2),
+        date: '2019'
+    },
+    {
         title:'Graduated A-Levels',
         location: 'International School @ ParkCity',
         description: 'A*AA in Maths, Physics, Biology',
@@ -53,7 +60,7 @@ export const experienceData = [
         date: '2023'
     },
     {
-        title:'Junior Front-end Developer',
+        title:'Junior Frontend Developer',
         location: 'Crave Asia',
         description:'First official job out of University',
         icon: React.createElement(FaComputer),
