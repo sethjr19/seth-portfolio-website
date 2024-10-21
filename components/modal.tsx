@@ -28,7 +28,7 @@ function Modal({isOpen, selectedSkill}: any) {
   return (
     <>
       {modalisOpen ? (
-        <motion.div className='sm:relative md:absolute right-[15%] lg:h-[20rem] min-h-[15rem] w-[20rem] md:w-[10rem] md:ml-[5rem] lg:mr-[2rem] flex p-5 bg-white m-3 border-l-2 border-black rounded-lg shadow-xl'
+        <motion.div className='sm:relative lg:h-[30rem] min-h-[15rem] w-[20rem] ml-0 md:w-[15rem] lg:mr-[2rem] flex p-5 bg-white m-3 border-l-2 border-black rounded-lg shadow-xl'
             animate={{
               opacity: modalisOpen ? 100 : 0, // Moves to the left by 200px when open
             }}

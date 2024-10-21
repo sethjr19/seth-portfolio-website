@@ -54,8 +54,8 @@ export default function Skills() {
           <SectionHeading>Skills</SectionHeading>
         </div>
         
-        <div className='flex flex-col w-[100vw] justify-center gap-8 relative items-center' >
-          <div className='flex flex-col w-[100%] justify-start sm:pr-0 relative'>
+        <div className='flex w-[100vw] justify-center relative items-center' >
+          <div className='flex flex-col justify-start sm:pr-0 relative'>
           <motion.div 
             className='flex justify-center items-center gap-9'
             animate={{
