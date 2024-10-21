@@ -2,8 +2,15 @@ import glipzImg from '@/public/glipz.png'
 import { describe } from 'node:test';
 import { title } from 'process';
 import { LuGraduationCap, LuSchool, LuGamepad2 } from "react-icons/lu";
-import { FaUniversity } from "react-icons/fa";
+import { FaUniversity, FaReact, FaNodeJs, FaPython  } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiTypescript, SiTailwindcss, SiMongodb, SiExpress,SiMysql} from "react-icons/si";
+
+import { TbBrandFirebase } from "react-icons/tb";
+
+
+
 import React from 'react';
 
 export const links = [
@@ -30,11 +37,31 @@ export const links = [
 ] as const;
 
 export const skillsData = [
-    "HTML",
-    "CSS",
-    "Javascript",
-    "React",
-    "Node.JS",
+    {
+        title: 'frontend',
+        skills: [
+            {title: 'React', icon : FaReact},
+            {title: 'Typescript', icon : SiTypescript},
+            {title: 'Tailwind', icon : SiTailwindcss},
+            {title: 'Next.js', icon : TbBrandNextjs},
+        ]
+    },
+    {
+        title: 'backend',
+        skills: [
+            {title: 'NodeJs', icon : FaNodeJs},
+            {title: 'Express', icon : SiExpress},
+            {title: 'Python', icon : FaPython },
+            {title: 'MySQL', icon : SiMysql},
+            {title: 'Firebase', icon : TbBrandFirebase},
+            {title: 'MongoDB', icon : SiMongodb},
+        ]
+    },
+    {
+        title: 'others',
+        skills: ['GitHub, Postman, GitLab']
+    }
+    
 ] as const; 
 
 export const experienceData = [

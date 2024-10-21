@@ -10,13 +10,13 @@ threshold: 0.5,
 });
 const { setActiveSection } = useActiveSectionContext();
 
-useEffect(() => {
-if (inView) {
-setActiveSection(sectionName);
-}
-}, [inView, setActiveSection]);
-return {
-ref,
-inView,
-};
+    useEffect(() => {
+    if (inView) {
+    setActiveSection(sectionName);
+    }
+    }, [inView, setActiveSection]);
+    return {
+    ref,
+    inView,
+    };
 }
